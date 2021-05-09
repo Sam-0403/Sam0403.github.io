@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "keywords" content = "HW3,My HomePage,HTML">
+        <meta name = "description" content = "這是鄭至盛的個人網頁">
+        <title>鄭至盛的個人網頁</title>
+        <link rel="icon" href="./MyHomePage.ico" type="image/x-icon">
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                line-height: 1.7em;
+                font-family: Verdana, Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                background: #f2f2f2;
+            }
+            a:link {
+                color: #0066AA;
+                text-decoration: none;
+            }
+            a:visited {
+                color: #0066AA;
+                text-decoration: none;
+            }
+            a:active {
+                color: #CC0066;
+                text-decoration: underline;
+            }
+            a:hover {
+                color: red;
+                text-decoration: underline;
+            }
+            h1 {
+                float:none;
+                margin-left: 150px;
+                margin-right: 20px;
+                font-size: 40px;
+            }
+            .MyPhoto {
+                float:right;
+                margin-right: 350px;
+                border-radius: 10px;
+                height: 330px;
+                width: auto;
+            }
+            h2 {
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 25px;
+            }
+            .TopBlock {
+                margin-left: 20px;
+                margin-right: 630px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                color:darkslategrey;
+                background-color:rgb(255, 255, 255);
+            }
+            .Hobby {
+                margin-left: 20px;
+                margin-right: 630px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                color:darkslategrey;
+                background-color:rgb(255, 255, 255);
+            }
+            .Reference {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+            }
+            p {
+                margin-left: 20px;
+                margin-right: 630px;
+                font-size: 25px;
+                color:darkslategrey;
+                background-color:rgb(255, 255, 255);
+            }
+        </style>
+    </head>
+    <body  onload="ShowTime()">
+        <h1>鄭至盛</h1>
+        <img src = "./MyPhoto.JPG" id = "image1" class="MyPhoto">
+        <h2>自我介紹：</h2>
+        <div class="TopBlock">
+            <div>我來自基隆，高中畢業於<a href="http://www.essh.kl.edu.tw/essh/index.asp" target="_blank">私立二信中學</a>，</div>
+            <div>目前就讀於<a href="https://web.ee.ntu.edu.tw/" target="_blank">臺灣大學電機工程學系</a>，正在努力探索自己，做著自己愛做的事中。</div>
+        </div>
+        <div class="Hobby">
+            <div>我的最大興趣就是彈吉他，曾經在<a href="https://www.facebook.com/IF-Music-Studio-230810440296733/" target="_blank">IF音樂工作室</a>學習吉他，最近也在練習寫歌；</div>
+            <div>也喜歡聽比較小眾的音樂，最近迷上<a href="https://en.wikipedia.org/wiki/Chon_(band)" target="_blank">Chon</a>樂團的歌，還有臺灣的<a href="https://blow.streetvoice.com/51047/" target="_blank">珂拉琪Collage</a>也很棒；</div>
+            <div>日常的時候喜歡畫畫，畫一些突然冒出來的小小思緒，或者上課無聊畫畫講台上的老師，也常常在<a href="https://www.pinterest.com/" target="_blank">Pinterest</a>上面找靈感。</div>
+        </div>
+        <p id="displayDateTime"></p>
+        <audio src= "./barradeen-bedtime-after-a-coffee.mp3" loop autoplay></audio>
+        <div class="Reference">
+            <div>Music Source (Please open the autoplay setting of your browsers):</div>
+            <div><a href="https://soundcloud.com/barradeen/">bedtime after a coffee by Barradeen</a></div>
+            <div><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Commons Attribution-ShareAlike 3.0 Unported</a></div>
+            <div>Music promoted by <a href="https://www.chosic.com/">https://www.chosic.com/</a></div>
+        </div>
+    </body>
+    <script language="JavaScript">
+        function ShowTime(){
+            var NowDate=new Date();
+            var mm=NowDate.getMonth()+1;
+            var d=NowDate.getDate();
+            var y=NowDate.getFullYear();
+            var h=NowDate.getHours();
+            var m=NowDate.getMinutes();
+            var s=NowDate.getSeconds();　
+            document.getElementById('displayDateTime').innerHTML = mm+'-'+d+'-'+y+' '+h+':'+m+':'+s;
+            setTimeout('ShowTime()',1000);
+        }
+    </script>
+</html>
